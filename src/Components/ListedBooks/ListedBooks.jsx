@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList } from '../../utility/addToDB';
 import Book from '../Book/Book';
 import ReadListBook from '../ReadListBook/ReadListBook';
+import { Helmet } from 'react-helmet-async';
 
 const ListedBooks = () => {
 
@@ -48,6 +49,11 @@ const ListedBooks = () => {
 
     return (
         <div className='max-w-7xl mx-auto'>
+
+          <Helmet>
+            <title>Boi Poka | Listed Books</title>
+          </Helmet>
+
 
 <div className="dropdown">
   <div tabIndex={0} role="button" className="btn m-1">

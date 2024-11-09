@@ -24,7 +24,7 @@ const Book = ({ book }) => {
     {
       tags.map((tag, idx) => <button key={idx} className="btn btn-xs bg-green-100 text-[#23BE0A] text-base font-medium">{tag}</button>)
     }
-    </div>
+    </div> 
 
     <h2 className="card-title">
       {bookName}

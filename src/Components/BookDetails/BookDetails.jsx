@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { addToStoreReadList } from "../../utility/addToDB";
 import { addToStoreWishList } from "../../utility/addToWB";
+import { Helmet } from "react-helmet-async";
 
 const BookDetails = () => {
 
@@ -21,7 +22,7 @@ const BookDetails = () => {
         // 1. understand what to store or serve: => bookId
         // 2. where to store: database
         // 3. array, list, collection:
-        // 4. check: if the book is already in the readList
+        // 4. check: if the book is already in the readList 
         // 5. if not, then add the book to the list
         // 6. if yes, don't add the book
 
@@ -35,6 +36,10 @@ const BookDetails = () => {
 
     return (
         <div className="max-w-7xl mx-auto grid grid-cols-2 gap-12">
+
+            <Helmet>
+                <title>Boi Poka | Book Details | {bookId}</title>
+            </Helmet>
 
             <div className="bg-[#F3F3F3] p-20 rounded-xl inline-flex justify-center items-center">
                 <img className="w-[420px]" src={image} alt={bookName} />
